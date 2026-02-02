@@ -1,11 +1,11 @@
 # Atlas CLI
 
 The Atlas CLI docs are available [here](https://www.mongodb.com/docs/atlas/cli/current/). Installation instructions are [here](https://www.mongodb.com/docs/atlas/cli/current/install-atlas-cli/). If you're on a Mac and want to use Homebrew, you can run the following:
-    ```
-    brew tap mongodb/brew
-    brew install mongodb-atlas
-    which atlas
-    ```
+```
+brew tap mongodb/brew
+brew install mongodb-atlas
+which atlas
+```
 
 If you haven't used Atlas before, you can try `atlas setup`. Otherwise, use `atlas auth login`, which opens an interactive menu. If you select `UserAccount`, an Atlas login screen will open in a browser, you pass some codes back and forth, and the CLI is connected to your account. More likely you'll be using APIKeys or Service Accounts (which must be created in Atlas in advance).
 
