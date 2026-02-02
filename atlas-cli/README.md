@@ -7,7 +7,7 @@ brew install mongodb-atlas
 which atlas
 ```
 
-If you haven't used Atlas before, you can try `atlas setup`. Otherwise, use `atlas auth login`, which opens an interactive menu. If you select `UserAccount`, an Atlas login screen will open in a browser, you pass some codes back and forth, and the CLI is connected to your account. More likely you'll be using APIKeys or Service Accounts (which must be created in Atlas in advance).
+If you haven't used Atlas before, you can try `atlas setup`. Otherwise, use `atlas auth login`, which opens an interactive menu. If you select `UserAccount`, an Atlas login screen will open in a browser, you pass some codes back and forth, and the CLI is connected to your account. More likely, though, you'll be using APIKeys or Service Accounts (which must be created in Atlas in advance).
 
 > **Note:**
 > To use the CLI in conjuntion with **Atlas for Government**, use `atlas auth login --gov` and select the ServiceAccount or APIKeys option, which must also be created in advance in *Atlas for Government*
