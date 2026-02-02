@@ -9,6 +9,8 @@ If you haven't used Atlas before, you can try `atlas setup`. Otherwise, use `atl
 
 For a smoke test, try `atlas deployments list`
 
+## Creating a Cluster
+
 The doc page for `atlas cluster create` is [here](https://www.mongodb.com/docs/atlas/cli/current/command/atlas-clusters-create/). But that take you down a complex path:
 - To create the json config file, see [here](https://www.mongodb.com/docs/atlas/cli/current/reference/json/cluster-config-file/)
 - That points to the Atlas Admin API docs, [here](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Clusters/operation/createCluster)
