@@ -26,5 +26,5 @@ This step automatically creates an API key (description = `mongodb-atlas-operato
 
 ## Deploy A4G Resources
 
-Create a Project and deploy a cluster. 
+Create a Project and deploy a cluster. See scripts for some simple test cases. 
 
