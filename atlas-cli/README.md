@@ -27,5 +27,6 @@ To test your connection, try `atlas deployments list`. It can be helpful to see 
 The doc page for `atlas cluster create` is [here](https://www.mongodb.com/docs/atlas/cli/current/command/atlas-clusters-create/), and it provides some simple [examples](https://www.mongodb.com/docs/atlas/cli/current/command/atlas-clusters-create/#examples) to get started. Not all options work with Atlas for Government. The following command deploys a very minimal cluster in AWS us-east-1 (on A4G this requires an Atlas project that was created *without* the "Gov regions only" option). Codes for the various cloud regions can be found [here](https://www.mongodb.com/docs/atlas/cloud-providers-regions/).
 ```
 atlas cluster create test-cli-cluster --projectId <PROJECT-ID> --provider AWS --region US_EAST_1 --members 3 --tier M20 --mdbVersion 8.0 --diskSizeGB 10
+atlas deployments list
 ```
 
