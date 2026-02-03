@@ -1,3 +1,5 @@
+# To-Do: review this to see if it's still current. 
+
 echo Deleting Demo user ...
 kubectl delete AtlasDatabaseUser demo-atlas-db-user
 kubectl delete secret demo-password

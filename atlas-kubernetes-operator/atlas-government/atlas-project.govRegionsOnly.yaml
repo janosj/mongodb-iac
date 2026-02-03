@@ -1,0 +1,7 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasProject
+metadata:
+  name: test-k8s-govregions-project
+spec:
+  name: test-k8s-govRegions-project
+  regionUsageRestrictions: GOV_REGIONS_ONLY

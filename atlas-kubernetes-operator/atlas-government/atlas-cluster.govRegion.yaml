@@ -1,0 +1,35 @@
+# examples: https://www.mongodb.com/docs/atlas/operator/current/atlasdeployment-custom-resource/
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasDeployment
+metadata:
+  name: test-k8s-govcloud-cluster
+spec:
+  projectRef:
+    # case sensitive: must be all lowercase
+    name: test-k8s-govregions-project
+  deploymentSpec:
+    clusterType: REPLICASET
+    name: test-k8s-govcloud-cluster
+    tags:
+    - key: "environment"
+      value: "production"
+    backupEnabled: true
+    replicationSpecs:
+      - numShards: 1
+        regionConfigs:
+         # Atlas CLI command: atlas clusters availableRegions list
+         - regionName: US_GOV_WEST_1
+           providerName: AWS
+           autoScaling:
+             diskGB:
+               enabled: true
+             compute:
+               enabled: true
+               scaleDownEnabled: true
+               minInstanceSize: M20
+               maxInstanceSize: M30
+           electableSpecs:
+             instanceSize: M20
+             nodeCount: 3
+           priority: 7
+

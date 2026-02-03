@@ -1,0 +1,35 @@
+# examples: https://www.mongodb.com/docs/atlas/operator/current/atlasdeployment-custom-resource/
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasDeployment
+metadata:
+  name: test-k8s-cluster
+spec:
+  projectRef:
+    # case sensitive: must be all lowercase
+    name: test-k8s-project
+  deploymentSpec:
+    clusterType: REPLICASET
+    name: test-k8s-cluster
+    tags:
+    - key: "environment"
+      value: "production"
+    backupEnabled: true
+    replicationSpecs:
+      - numShards: 1
+        regionConfigs:
+         # https://www.mongodb.com/docs/atlas/cloud-providers-regions/
+         - regionName: US_EAST_1
+           providerName: AWS
+           autoScaling:
+             diskGB:
+               enabled: true
+             compute:
+               enabled: true
+               scaleDownEnabled: true
+               minInstanceSize: M20
+               maxInstanceSize: M30
+           electableSpecs:
+             instanceSize: M20
+             nodeCount: 3
+           priority: 7
+
